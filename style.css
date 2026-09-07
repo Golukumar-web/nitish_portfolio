@@ -417,17 +417,21 @@ h2 em {
 .hero-portrait {
     position: relative;
 
+    width: 100%;
     max-width: 395px;
 
     margin-left: auto;
 }
 
 .portrait-frame {
-    height: 480px;
+    aspect-ratio: 4 / 5;
+    width: 100%;
 
     position: relative;
 
     padding: 11px 11px 0;
+
+    overflow: visible;
 
     border: 1px solid #ffffff48;
 }
@@ -452,6 +456,7 @@ h2 em {
     height: 100%;
 
     object-fit: cover;
+    object-position: center top;
 
     filter: saturate(0.75);
 
@@ -1643,7 +1648,7 @@ body.light footer {
     .hero-portrait {
         margin: 20px auto 0;
 
-        width: min(390px, 80%);
+        width: min(390px, 100%);
     }
 
     .hero:after {
@@ -1743,12 +1748,8 @@ body.light footer {
         font-size: 9px;
     }
 
-    .portrait-frame {
-        height: 350px;
-    }
-
     .portrait-badge {
-        left: -15px;
+        left: 8px;
 
         bottom: 15px;
     }
